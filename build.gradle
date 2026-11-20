@@ -17,9 +17,15 @@ archivesBaseName = 'obezkedi'
 java.toolchain.languageVersion = JavaLanguageVersion.of(8)
 
 minecraft {
-    mappings channel: 'official', version: '1.16.5'
+    // Kod MCP isimlerini kullanıyor (isTamed, getEntityId, isRemote...).
+    // 'official' kanalı Mojang isimleri verir ve derleme hatası çıkarır.
+    mappings channel: 'snapshot', version: '20210309-1.16.5'
     runs {
         client {
+            workingDirectory project.file('run')
+            mods { obezkedi { source sourceSets.main } }
+        }
+        server {
             workingDirectory project.file('run')
             mods { obezkedi { source sourceSets.main } }
         }
