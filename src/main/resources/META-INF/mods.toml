@@ -1,0 +1,23 @@
+modLoader="javafml"
+loaderVersion="[36,)"
+license="MIT"
+
+[[mods]]
+modId="obezkedi"
+version="1.0.0"
+displayName="Obez Kedi"
+description='''Evcil kedilerinizi çok fazla balıkla beslerseniz şişmanlarlar.'''
+
+[[dependencies.obezkedi]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.16.5]"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.obezkedi]]
+modId="forge"
+mandatory=true
+versionRange="[36,)"
+ordering="NONE"
+side="BOTH"
